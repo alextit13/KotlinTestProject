@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KotlinTestProject</string>
+    <string name="baseUrl">http://www.nbrb.by/Services/</string>
+    <string name="not_have_internet">Отсутсвует интернет подключение</string>
+    <string name="refresh">Обновить</string>
+
+</resources>
