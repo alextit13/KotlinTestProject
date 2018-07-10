@@ -7,7 +7,6 @@ import java.io.InputStream
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
-import java.nio.charset.Charset
 
 var LOG_TAG: String = "HttpHandler"
 

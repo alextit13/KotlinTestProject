@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.currency_item.view.*
+import java.util.*
 
 class RecyclerCustomAdapter(var data : MutableList<Currency>, var context: Context) : RecyclerView.Adapter<RecyclerCustomAdapter.ViewHolderCustom>() {
 
@@ -15,6 +16,11 @@ class RecyclerCustomAdapter(var data : MutableList<Currency>, var context: Conte
         holder?.RateView?.text = data[position].Rate.toString()
         holder?.NameView?.text = data[position].Name
         holder?.ScaleView?.text = "за ${data[position].Scale} ед."
+    }
+
+    fun changePositionItems(startPosition : Int, endPosition : Int){
+        Collections.swap(data,startPosition,endPosition)
+        notifyDataSetChanged()
     }
 
     override fun getItemCount(): Int {

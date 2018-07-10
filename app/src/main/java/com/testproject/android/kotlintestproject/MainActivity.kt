@@ -134,18 +134,17 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = RecyclerCustomAdapter(list,this)
 
-
-
         findViewById<RelativeLayout>(R.id.stub).visibility=View.INVISIBLE
         findViewById<ProgressBar>(R.id.progress).visibility=View.INVISIBLE
 
-
         val mIth = ItemTouchHelper(
                 object : ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP or ItemTouchHelper.DOWN,
-                        ItemTouchHelper.LEFT) {
+                        ItemTouchHelper.UP) {
                     override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {
                         val fromPos = viewHolder.adapterPosition
                         val toPos = target.adapterPosition
+
+                        (recyclerView.adapter as RecyclerCustomAdapter).changePositionItems(fromPos,toPos)
                         // move item in `fromPos` to `toPos` in adapter.
                         return true// true if moved, false otherwise
                     }
