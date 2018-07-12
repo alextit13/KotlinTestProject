@@ -1,4 +1,4 @@
-package com.testproject.android.kotlintestproject
+package com.testproject.android.kotlintestproject.viewModel
 
 import android.util.Log
 import java.io.BufferedReader

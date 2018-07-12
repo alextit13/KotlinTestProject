@@ -3,5 +3,6 @@
     <string name="baseUrl">http://www.nbrb.by/Services/</string>
     <string name="not_have_internet">Отсутсвует интернет подключение</string>
     <string name="refresh">Обновить</string>
+    <string name="URL">http://www.nbrb.by/Services/XmlExRates.aspx</string>
 
 </resources>

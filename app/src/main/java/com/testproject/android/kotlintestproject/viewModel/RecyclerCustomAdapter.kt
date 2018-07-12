@@ -1,10 +1,12 @@
-package com.testproject.android.kotlintestproject
+package com.testproject.android.kotlintestproject.viewModel
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.testproject.android.kotlintestproject.R
+import com.testproject.android.kotlintestproject.model.Currency
 import kotlinx.android.synthetic.main.currency_item.view.*
 import java.util.*
 
